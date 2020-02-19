@@ -1,0 +1,166 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  /*color: #191a1c;*/
+  color: #262626;
+  font-weight: 700;
+}
+h1 {
+  font-size: 74px;
+  letter-spacing: -2px;
+  margin: 10px 0;
+}
+h2 {
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+h3 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+h4 {
+font-size: 20px;
+  letter-spacing: -1px;
+}
+h5 {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+h6 {
+  font-size: 13px;
+  letter-spacing: 0;
+}
+p {
+  font-size: 15px;
+  line-height: 1.75;
+font-weight: 300;
+  color: #888;
+}
+[data-overlay-dark] p {
+font-weight: 400;
+}
+.lead {
+  font-size: 22px;
+font-weight: 300;
+  line-height: 1.5;
+}
+[data-overlay-dark] p.lead {
+font-weight: 300;
+}
+#hero .lead {
+  line-height: 1.4;
+}
+.hero-big-title {
+  font-size: 110px;
+  letter-spacing: -6px;
+  line-height: 1;
+  margin: 0;
+}
+@media all and (max-width: 992px) {
+  h1 {
+      font-size: 50px;
+  }
+  h1 strong {
+      font-size: 56px;
+  }
+  h2 {
+      font-size: 40px;
+  }
+  h2 strong {
+      font-size: 46px;
+  }
+  .hero-big-title {
+      font-size: 70px;
+      letter-spacing: -4px;
+  }
+}
+@media all and (max-width: 768px) {
+  h1 {
+      font-size: 36px;
+  }
+  h1 strong {
+      font-size: 42px;
+  }
+  h2 {
+      font-size: 30px;
+  }
+  h2 strong {
+      font-size: 36px;
+  }
+  .hero-big-title {
+      font-size: 50px;
+      letter-spacing: -2px;
+  }
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-bottom: 10px;
+}
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+ul.bullets {
+  list-style: inside;
+}
+blockquote {
+  font-size: 18px;
+  line-height: 1.7;
+  font-style: italic;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #999;
+  border-left: 2px solid;
+}
+strong {
+font-weight: 600;
+}
+hr {
+margin: 0;
+border-color: #f4f4f4;
+}
+a:hover,
+a:focus,
+a:active {
+text-decoration: none;
+outline: none;
+}
+
+html, body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+  }
+  body {
+    font-family: 'Hind', sans-serif;
+    color: #666;
+    font-weight: 400;
+  }
+  ::selection {
+    background: rgba(0,0,0,.16)
+  }
+  ::-moz-selection {
+    background: rgba(0,0,0,.16)
+  }
+  a {
+    color: #828282;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    transition: color .3s, opacity .5s;
+  }
+  a:hover {
+    cursor: pointer;
+  }
