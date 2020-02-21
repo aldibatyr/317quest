@@ -1,4 +1,4 @@
-/* /*////////////////////////////////////////
+/* ////////////////////////////////////////
 // . General
 // . Heros
 // . Buttons
@@ -4863,4 +4863,4 @@ visibility: hidden;
   -moz-transition: opacity .6s, transform 1s;
   transition: opacity .6s, transform 1s;
   transition-delay: 1s;
-} */
+}

@@ -1,9 +1,10 @@
-.navigation {
-  height: 70px;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-}
+// .navigation {
+//   height: 70px;
+//   top: 0;
+//   width: 100vw;
+//   background: white;
+//   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+// }
 
 .nav-container {
   height: 100%;
@@ -13,4 +14,31 @@
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.nav-links {
+  margin-left: auto;
+  ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .nav-seperator {
+      line-height: 0;
+      height: 68px;
+      margin: 0 16px 0 16px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.nav-seperator {
+    display: inline-block;
+    margin: 0 20px;
+    border-left: 1px solid grey;
+  }
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
 }
