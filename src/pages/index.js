@@ -8,6 +8,8 @@ import Hero from '../components/Hero';
 import About from "../components/About";
 import VideoPreview from "../components/VideoPreview";
 import Overview from "../components/Overview";
+import Facts from "../components/Facts";
+import SignUp from "../components/SignUp";
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +18,8 @@ const IndexPage = () => (
     <About/>
     <VideoPreview/>
     <Overview/>
+    <Facts/>
+    <SignUp/>
   </Layout>
 )
 
