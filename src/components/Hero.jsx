@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../styles/hero.scss';
 import heroBack from '../images/heroBack.jpg';
 import styled from 'styled-components';
+import gsap from 'gsap';
 
 const Section = styled.section`
     height: 100vh;
@@ -50,15 +51,20 @@ const CTAButton = styled.button`
 
 
 const Hero = () => {
+
+    useEffect(() => {
+        gsap.from('title-text-up', {x: 20, opacity: 0})
+
+    }, [])
     return (
         <Section className='hero-section' id='home'>
             <Foreground>
                 <div className="text-wrapper" style={{ textAlign: 'center', marginTop: '200px', display: 'flex', flexDirection: 'column' }}>
-                    <Title>317Quest.</Title>
+                    <Title className='title-text-up'>317Quest.</Title>
                     <SubText>Get rewarder for exploring your surroundings.</SubText>
                     <a href="http://appstore.com" target="_blank" rel="noopener noreferrer">
                         <CTAButton>
-                            download in app store
+                            Coming Soon
                         </CTAButton>
                     </a>
                 </div>

@@ -33,7 +33,7 @@ const StepBox = styled.div`
 
 const About = () => {
     return (
-        <AboutSection >
+        <AboutSection id="about">
             <ImageBox>
                 <img src={phone} style={{ height: '550px' }} />
             </ImageBox>

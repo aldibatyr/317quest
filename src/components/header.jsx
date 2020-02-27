@@ -5,24 +5,22 @@ import { Container, Row, Navbar, Nav, NavDropdown, Form, FormControl, Button } f
 import LogoFacebook from 'react-ionicons/lib/LogoFacebook'
 import LogoTwitter from 'react-ionicons/lib/LogoTwitter'
 import LogoInstagram from 'react-ionicons/lib/LogoInstagram'
-import logo from '../images/gatsby-icon.png'
+import logo from '../images/logo.png'
 import '../styles/header.scss'
 
 const Header = ({ siteTitle }) => (
 
   <header>
     <nav className="navigation">
-      <Navbar bg="white" expand="lg" style={{ boxShadow: '0 0 50px 0 rgba(0, 0, 0, 0.1)'}} fixed="top">
+      <Navbar bg="white" expand="lg" style={{ boxShadow: '0 0 50px 0 rgba(0, 0, 0, 0.1)', position: 'relative'}} fixed="top">
         <Link to="/">
           <img src={logo} alt="logo" style={{ height: '36px', width: '36px', margin: 'auto', display: 'block' }} />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" style={{ fontFamily: 'Montserrat', fontSize: '0.8rem', textTransform: 'uppercase' }}>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">about</Nav.Link>
-            <Nav.Link href="#overview">overview</Nav.Link>
-            <Nav.Link href="#store">store</Nav.Link>
+            <Link className='nav-link' href="/">Home</Link>
+            <Nav.Link href="/store">store</Nav.Link>
             <Link to='/contact' className='nav-link'>contact</Link>
             <span className='nav-seperator'></span>
             <div className="social-links">

@@ -10,7 +10,7 @@ const OverviewSection = styled.section `
 
 const Overview = () => {
     return (
-        <OverviewSection>
+        <OverviewSection id="overview">
             <Container>
                 <Col style={{textAlign: 'center'}}>
                     <h2>See Some Cool Stuff</h2>

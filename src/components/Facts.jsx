@@ -15,7 +15,7 @@ const FactsSection = styled.section`
 
 const Background = styled.div`
     height: 100%;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 10;
     background: url(${background}) no-repeat center center;
