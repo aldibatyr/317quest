@@ -52,8 +52,12 @@ const CTAButton = styled.button`
 
 const Hero = () => {
 
+    let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power4.out'}});
+
     useEffect(() => {
-        gsap.from('title-text-up', {x: 20, opacity: 0})
+        tl.from('.title-text-up', {y: 50, opacity: 0})
+        tl.from('.text-wrapper span', {y: -50, opacity: 0}, '-=0.2')
+        tl.from('.animate-down', {y: -100, opacity: 0})
 
     }, [])
     return (
@@ -63,7 +67,7 @@ const Hero = () => {
                     <Title className='title-text-up'>317Quest.</Title>
                     <SubText>Get rewarder for exploring your surroundings.</SubText>
                     <a href="http://appstore.com" target="_blank" rel="noopener noreferrer">
-                        <CTAButton>
+                        <CTAButton className='animate-down'>
                             Coming Soon
                         </CTAButton>
                     </a>

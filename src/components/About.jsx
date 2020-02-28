@@ -1,7 +1,10 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
-import phone from '../images/phone.png'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
+import { useEffect } from 'react'
+import gsap from 'gsap'
 
 const AboutSection = styled.section`
     position: relative;
@@ -31,11 +34,31 @@ const StepBox = styled.div`
 
 `
 
+
+
 const About = () => {
+
+
+    useEffect(() => {
+        gsap.from('.slideUp', {y: 200, transform: 'scale(0.8)', opacity: 0, duration: 2, ease: 'power4.out', delay: 1.2})
+    })
+
+    const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "phone.png" }) {
+          childImageSharp {
+              fixed(width: 300) {
+                  ...GatsbyImageSharpFixed
+              }
+          }
+      }
+    }
+    `)
+
     return (
         <AboutSection id="about">
-            <ImageBox>
-                <img src={phone} style={{ height: '550px' }} />
+            <ImageBox className='slideUp'>
+                <Img fixed={data.placeholderImage.childImageSharp.fixed}/>
             </ImageBox>
             <Container>
                 <Row>
@@ -63,6 +86,7 @@ const About = () => {
                     </StepBox>
                 </Row>
             </Container>
+            <p>{console.log(data)}</p>
         </AboutSection>
     )
 }
