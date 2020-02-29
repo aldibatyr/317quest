@@ -52,7 +52,7 @@ const CTAButton = styled.button`
 
 const Hero = () => {
 
-    let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power4.out'}});
+    let tl = gsap.timeline({defaults: {duration: 0.5, ease: 'power4.out '}});
 
     useEffect(() => {
         tl.from('.title-text-up', {y: 50, opacity: 0})
