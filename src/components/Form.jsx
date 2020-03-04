@@ -45,7 +45,7 @@ export const Button = styled.button`
 
 const FormComponent = () => {
     return (
-        <Form>
+        <Form name="contact" method="POST" data-netlify="true">
             <Input width="full">
                 <input type="text" name="name" id="name" placeholder="Your Name" />
             </Input>
