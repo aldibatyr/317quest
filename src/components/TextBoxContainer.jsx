@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer'
 const TextBox = styled.div`
  margin: auto; 
  padding: 0 8%;
- width: 600px;
+ max-width: 600px;
 `
 
 const TextBoxContainer = () => {
