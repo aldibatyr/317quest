@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components'
 import gsap from 'gsap'
 import { useInView } from 'react-intersection-observer'
@@ -12,16 +12,25 @@ const TextBox = styled.div`
 
 const TextBoxContainer = () => {
 
-    const [textBox, inView, entry] = useInView({
+
+    const [textBox, inView] = useInView({
+        /* Optional options */
+        triggerOnce: true,
         threshold: 1,
     })
 
     if (inView) {
-        gsap.from('.fade-box', 1, { opacity: 0, y: 60, ease: 'power4.out' })
+        gsap.to('.fade-box', 1,
+        {
+            opacity: 1,
+            y: 0,
+            ease: "power4.out"
+        })
     }
+        
     return (
-        <TextBox className="text-box" ref={textBox} >
-            <div className="fade-box">
+        <TextBox className="text-box" ref={textBox}>
+            <div className="fade-box" style={{opacity: 0, transform: 'translate(0px, 60px)'}}>
                 <h2 style={{ textAlign: 'center' }}>
                     <span>Explore the city.</span>
                     <br />

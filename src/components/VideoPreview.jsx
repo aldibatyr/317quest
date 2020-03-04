@@ -47,6 +47,7 @@ const VideoPreview = () => {
 
 
     if (inView) {
+        console.log('videopreview')
         tl.to('.overlay', 1, {y: '100%', ease: 'power4.out'})
     }
 
