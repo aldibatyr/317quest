@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import { useIntersection } from 'react-use'
 import { useInView } from 'react-intersection-observer'
+import TextBoxContainer from './TextBoxContainer'
 
 const AboutSection = styled.section`
     position: relative;
@@ -42,33 +43,10 @@ const StepBox = styled.div`
 const About = () => {
 
 
-    const intersectionRef = useRef(null);
-    const intersection = useIntersection(intersectionRef, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 1
-    });
 
     useEffect(() => {
         gsap.from('.slideUp', { y: 200, transform: 'scale(0.8)', opacity: 0, duration: 2, ease: 'power4.out', delay: 1.2 })
     }, [])
-
-    const fadeOut = element => {
-        console.log('fadeout')
-        gsap.to(element, { opacity: 0, duration: 0.5, ease: 'power4.out' })
-    }
-
-    const fadeIn = element => {
-        console.log('fadein')
-        gsap.to(element, { opacity: 1, duration: 0.5, ease: 'power4.out' })
-    }
-
-
-
-    intersection && intersection.intersectionRatio < 1 ?
-        fadeOut('.fade-box')
-        : fadeIn('.fade-box')
-
 
     const [element, inView, entry] = useInView({
         /* Optional options */
@@ -107,16 +85,7 @@ const About = () => {
             </ImageBox>
             <Container>
                 <Row>
-                    <TextBox className="text-box" ref={intersectionRef} >
-                        <div className="fade-box" style={{ opacity: '0' }}>
-                            <h2 style={{ textAlign: 'center' }}>
-                                <span>Explore the city.</span>
-                                <br />
-                                <span>Earn Points.</span>
-                            </h2>
-                            <p style={{ fontSize: '1.2rem' }}>There are million and one things to do in the city. Explore the city and participate in mini quizes to earn points. So why not get rewarded?</p>
-                        </div>
-                    </TextBox>
+                    <TextBoxContainer/>
                 </Row>
                 <Row ref={element} style={{marginTop: '100px'}}>
                     <StepBox className='stagger-fade'>
