@@ -30,6 +30,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-styled-components`,
+    },
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: `https://317quest.us19.list-manage.com/subscribe/post?u=3a5892b221ad898805c9e6650&amp;id=14b569ab80`,
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Container } from 'react-bootstrap';
-
+import addToMailchimp from 'gatsby-plugin-mailchimp';
+import Lottie from 'react-lottie';
+import animationData from '../images/success.json';
 
 const SignupSection = styled.section`
     padding: 100px 0;
@@ -51,6 +53,40 @@ const Form = styled.form`
 `
 
 const SignUp = () => {
+
+    const animOptions = {
+        loop: false,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRation: 'xMidYMid slice'
+        }
+    };
+
+    const [email, setEmail] = useState('');
+    const [result, setResult] = useState({});
+    const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        const response = await addToMailchimp(email);
+        if (response.result === 'error') {
+            const error = response.msg.split('.');
+            const formatted = error[0].concat(error[1]);
+            console.log(formatted)
+            setError(formatted)
+        } else {
+            setResult(response)
+            setError('');
+            setSuccess(true);
+        }
+        setLoading(false);
+        setEmail('');
+
+    }
     return (
         <SignupSection>
             <Container>
@@ -59,12 +95,26 @@ const SignUp = () => {
                     <span style={{ fontSize: '1.2rem' }}>We have cool givaways and useful information available for our subscribers.</span>
                 </div>
                 <div className="input-wrapper">
-                    <Form>
-                        <input type="text" name="subscribe" id="subscribe" placeholder="Enter email address" />
+                    <Form onSubmit={e => handleSubmit(e)}>
+                        <input type="text" name="subscribe" id="subscribe" placeholder="Enter email address" value={email} onChange={e => setEmail(e.target.value)} />
                         <button>
-                            <span>SIGN UP</span>
+                            {success ?
+                                (<div className="animation-wrapper" style={{marginTop: '-35px'}}>
+                                    <Lottie
+                                        options={animOptions}
+                                        height={120}
+                                    />
+                                </div>
+                                )
+                                : (loading ? (<span>loading</span>) : (<span>SIGN UP</span>))}
                         </button>
                     </Form>
+                </div>
+                <div className="error-wrapper">
+                    <div className="error" style={{ width: '300px', margin: 'auto' }}>
+                        {error ? <span style={{ color: 'red' }}>{error}</span> : <></>}
+
+                    </div>
                 </div>
             </Container>
         </SignupSection>
