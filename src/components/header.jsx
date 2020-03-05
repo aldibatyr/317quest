@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" style={{ fontFamily: 'Montserrat', fontSize: '0.8rem', textTransform: 'uppercase' }}>
             <Link className='nav-link' to="/">Home</Link>
-            <Link to="/store">store</Link>
+            <Link className='nav-link' to="/store">store</Link>
             <Link to='/contact' className='nav-link'>contact</Link>
             <span className='nav-seperator'></span>
             <div className="social-links">
