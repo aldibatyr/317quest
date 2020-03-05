@@ -19,8 +19,8 @@ const Header = ({ siteTitle }) => (
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto" style={{ fontFamily: 'Montserrat', fontSize: '0.8rem', textTransform: 'uppercase' }}>
-            <Link className='nav-link' href="/">Home</Link>
-            <Nav.Link href="/store">store</Nav.Link>
+            <Link className='nav-link' to="/">Home</Link>
+            <Link to="/store">store</Link>
             <Link to='/contact' className='nav-link'>contact</Link>
             <span className='nav-seperator'></span>
             <div className="social-links">

@@ -89,7 +89,7 @@ const Facts = () => {
                     <ContentRow>
                         {content.map((item, i) => {
                             return (
-                                <FactCard>
+                                <FactCard key={i}>
                                     <img src={item.logo} alt='fact logo' />
                                     <div className="text">
                                         <p>{item.text}</p>

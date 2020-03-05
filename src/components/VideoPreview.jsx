@@ -53,7 +53,7 @@ const VideoPreview = () => {
 
     return (
         <>
-            <VideoPreviewContainer >
+            <VideoPreviewContainer ref={overlay} >
                 <div className="content-wrapper"  style={{ marginTop: '50px', marginBottom: '120px' }}>
                     <h2>See What's up for grabs!</h2>
                     <span style={{ fontSize: '1.2rem' }}>Your task is to travel to the locations! Our's is to find best rewards!</span>
@@ -68,7 +68,7 @@ const VideoPreview = () => {
                         </PlayButton>
                     </div>
                 </div>
-                <div className="overlay" ref={overlay}>
+                <div className="overlay" >
 
                 </div>
             </VideoPreviewContainer>

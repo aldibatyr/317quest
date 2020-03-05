@@ -20,7 +20,6 @@ const Overview = () => {
       <Container>
         <Col style={{ textAlign: 'center' }}>
           <h2>See Some Cool Stuff</h2>
-          <span style={{ fontSize: '1.2rem' }}>We worked hard for these images, so at least admire them</span>
         </Col>
         <div className="gallery">
           <div className="screen-box">
