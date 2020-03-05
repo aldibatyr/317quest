@@ -58,7 +58,7 @@ const VideoPreview = () => {
                     <h2>See What's up for grabs!</h2>
                     <span style={{ fontSize: '1.2rem' }}>Your task is to travel to the locations! Our's is to find best rewards!</span>
                     <div className="button-wrapper">
-                        <PlayButton href="http://youtube.com" target="_blank" rel="noopener noreferrer">
+                        <PlayButton href="https://www.youtube.com/channel/UCYZttGjz_xhBCWl8_YNMoOQ" target="_blank" rel="noopener noreferrer">
                             <svg style={{ transform: 'translatex(4px)' }} xmlns="http://www.w3.org/2000/svg" width="25" height="29" viewBox="0 0 25 29">
                                 <g id="Polygon_1" data-name="Polygon 1" transform="translate(25) rotate(90)" fill="#000">
                                     <path d="M 28.13198280334473 24.5 L 0.8680197596549988 24.5 L 14.50000095367432 0.9965841174125671 L 28.13198280334473 24.5 Z" stroke="none" />
