@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
             <div className="social-links">
               <Nav.Link href='https://facebook.com' target='blank'><LogoFacebook /></Nav.Link>
               <Nav.Link href='https://twitter.com' target='blank'><LogoTwitter /></Nav.Link>
-              <Nav.Link href='https://instagram.com' target='blank'><LogoInstagram /></Nav.Link>
+              <Nav.Link href='https://instagram.com/317quest' target='blank'><LogoInstagram /></Nav.Link>
             </div>
           </Nav>
         </Navbar.Collapse>

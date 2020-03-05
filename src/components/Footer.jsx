@@ -63,7 +63,7 @@ const Footer = () => {
                         </a>
                     </Link>
                     <Link>
-                        <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.youtube.com/channel/UCYZttGjz_xhBCWl8_YNMoOQ" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faYoutube} />
                         </a>
                     </Link>
