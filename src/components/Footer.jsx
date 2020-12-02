@@ -7,7 +7,7 @@ import {
   faFacebook,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
-import { Link, withPrefix } from "gatsby"
+import { withPrefix } from "gatsby"
 
 const FooterSection = styled.footer`
   margin-top: 100px;

@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { PageHeader } from "react-bootstrap"
 import styled from "styled-components"
 import { Button } from '../components/Form'
 import { Link } from "gatsby"
@@ -25,8 +24,6 @@ const NotFoundPage = () => (
         </Button>
       </Link>
     </Page>
-
-
   </Layout>
 )
 

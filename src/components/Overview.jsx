@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Col } from 'react-bootstrap'
 import loginScreen from '../images/login.png';
 import contactScreen from '../images/contact.png';
 import newsScreen from '../images/news.png';

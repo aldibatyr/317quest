@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Container, Row, Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
 import LogoFacebook from 'react-ionicons/lib/LogoFacebook'
 import LogoTwitter from 'react-ionicons/lib/LogoTwitter'
 import LogoInstagram from 'react-ionicons/lib/LogoInstagram'
