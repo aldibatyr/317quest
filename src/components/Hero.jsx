@@ -72,7 +72,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <CTAButton className="animate-down">Available Now</CTAButton>
+            <CTAButton className="animate-down">Start the Quest</CTAButton>
           </a>
         </div>
       </Foreground>
