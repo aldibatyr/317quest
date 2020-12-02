@@ -15,12 +15,12 @@ const IndexPage = () => {
   const { width, height } = useWindowSize()
   return (
     <Layout>
-      <Confetti
+      {/* <Confetti
         tweenDuration={5000}
         width={width}
         height={height}
         recycle={false}
-      />
+      /> */}
       <SEO title="Home" />
       <Hero />
       <About />
