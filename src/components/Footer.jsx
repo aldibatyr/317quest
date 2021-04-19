@@ -80,7 +80,7 @@ const Footer = () => {
           </SocialLink>
           <SocialLink>
             <a
-              href="https://www.youtube.com/channel/UCYZttGjz_xhBCWl8_YNMoOQ"
+              href="https://www.youtube.com/channel/UCWiKTlg5-_bzoLftOQtaVMw/videos"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -89,10 +89,10 @@ const Footer = () => {
           </SocialLink>
         </SocialLinks>
         <div className="additional-text">
-          <span>All rights reserved The 317, LLC 2020</span>
+          <span>All rights reserved The 317, LLC 2021</span>
         </div>
         <div className="developed">
-          <span>
+          {/* <span>
             Developed By{" "}
             <a
               href="http://creativecircle.dev"
@@ -101,7 +101,7 @@ const Footer = () => {
             >
               Aldiyar Batyrbekov
             </a>{" "}
-          </span>
+          </span> */}
           <br />
           <a
             href={withPrefix("./PP317Quest.pdf")}
